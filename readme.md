@@ -18,5 +18,22 @@ For the multivariate analysis, I first looked at price vs horsepower by producti
 
 ## Key Insights for Presentation
 
-The first visualization for my presentation is the distribution of the price variable. For this, I used both a histogram and a boxplot. I adapted the original plots from my exploratory analysis to make more polished versions for explanatory analysis. I changed the bins and added a chart title and axis labels for the histogram. For the boxplot I switched from a matplotlib boxplot to a seaborn one and added a chart title and x-axis label.
-The next visualization in my presentation is a scatterplot of price vs horsepower. This plot was adapted from my multivariate analysis by improving axis labels, adding a chart title, and resizing the plot.
+The first visualization for my presentation is the distribution of the price variable. For this, I used both a histogram and a boxplot. I adapted the original plots from my exploratory analysis to make more polished versions for explanatory analysis. I changed the bins and added a chart title and axis labels for the histogram. For the boxplot I switched from a matplotlib boxplot to a seaborn one and added a chart title and x-axis label. These plots show the price distribution with its range and median.
+The next visualization in my presentation is a scatterplot of price vs horsepower. This plot was adapted from my bivariate analysis by improving axis labels, adding a chart title, and resizing the plot. This plot shows that there is a strong correlation between horsepower and price and that horsepower is the feature with greatest impact on price.
+The next visualization included from the bivariate analysis is the bar plot of mean price vs model year. This plot was polished slightly by improving the axis labels and chart title. This plot shows a correlation between year and price, although it is not a strong correlation.
+Also from the bivariate analysis, the next plot is a box plot of price distribution by make. I tried this plot ordered by make value count to add another piece of information by using order as a type of encoding, but the plot is much clearer when ordered by mean price and the count for make does not really add much usefull information to the visualization. This plot was slightly polished by adding a chart title and improving the axis labels. This plot is useful to show how the make affects the price and shows the ranges and medians for makes.
+Next, I used a modified version of the mean price vs categorical variables bar chart subplots. For the polished version, I used only the charts with transmission type, drive wheels, and vehicle size on the x-axis. I also edited the axes titles, added chart titles, rotated the xticks labels for two subplots, set the error bars to use standard deviation, and set the 3 subplots on one row with 3 columns. These plots show the effects of these categorical variables on price.
+The next visualization is from the multivariate analysis. The point plot of price vs number of engine cylinders grouped by fuel type was altered quite a bit for the explanatory analysis. For aesthetics, I edited the x-axis title. The original plot contained all data from the dataset, for the polished version I used a subset of data, filtering by cylinders and fuel type to include only 4, 6, and 8 cylinder vehicles (the most common numbers of engine cylinders) and to ignore alternative fuel types (electric and natural gas) to increase the clarity of the figure and focus only on the data of interest. This plot shows the trend of increasing price with increasing number of cylinders and shows the effect of fuel type on price. Grouping by make is useful for clarifying the effects of the other two variables without the interference of the make variable.
+
+
+## Files
+
+car_data.csv is the original dataset
+cars_final.csv is a copy of the final cleaned dataframe
+car_exploration.ipynb is the Jupyter notebook file of the exploratory analysis
+car_exploration.html is same as previous but in html format
+car_slide_deck.ipynb is the Jupyter notebook of the explanatory analysis slide show
+car_slide_deck.html is the same as previous in html format
+car_slide_deck.slides.html is the explanatory analysis slide show product of nbconvert --to slides --template output_toggle.tpl --post serve
+output_toggle.tpl is the template file used for creating the slide show with nbconvert
+readme.md is this file, the read me
